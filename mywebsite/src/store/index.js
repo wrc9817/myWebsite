@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 
-export default createStore({
+export const store = createStore({
   state: {
   },
   getters: {
@@ -12,3 +12,6 @@ export default createStore({
   modules: {
   }
 })
+export function setupStore(app){
+  app.use(store)
+}
