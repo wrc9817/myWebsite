@@ -29,4 +29,7 @@ nav a.router-link-exact-active {
 .el-main{
   padding:0 !important;
 }
+.black{
+  color: #333;
+}
 </style>

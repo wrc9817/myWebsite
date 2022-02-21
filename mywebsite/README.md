@@ -1,24 +1,9 @@
-# mywebsite
+# 个人网站
 
-## Project setup
-```
-npm install
-```
+## 内容
+- 主要包括个人简历，项目经历及联系方式
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 引入
+- ElementUI
+- Animate.css, wow.js

@@ -1,6 +1,6 @@
 <template>
-  <el-container>
-    <el-header height="62px" class="header">
+  <el-container class="bg">
+    <el-header height="96px" class="header">
         <Banner></Banner>
     </el-header>
     <el-main>
@@ -19,8 +19,10 @@ export default {
 </script>
 
 <style scoped>
-.header{
-    
-    background: #24292f;
+.bg{
+    position: absolute;
+        background-image: url('../../assets/img/主背景.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
 }
 </style>
