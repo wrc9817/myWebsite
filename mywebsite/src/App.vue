@@ -1,7 +1,11 @@
 <template>
   <router-view/>
 </template>
+<script>
+export default {
 
+}
+</script>
 <style>
 body{
   margin:0 !important;
@@ -31,5 +35,8 @@ nav a.router-link-exact-active {
 }
 .black{
   color: #333;
+}
+.white{
+  color:white;
 }
 </style>

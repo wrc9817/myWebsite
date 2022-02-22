@@ -1,6 +1,10 @@
 @font-face{
-    font-family: 'headerFont';
+    font-family: 'znFont';
     src:url('./QianTuBiFengShouXieTi-2.ttf');
     font-weight: normal;
     font-style: normal;
+}
+@font-face {
+    font-family: 'englishFont';
+    src: url('./FrasellPersonalUse-2.otf');
 }

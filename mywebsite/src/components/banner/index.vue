@@ -1,22 +1,22 @@
 <template>
-    <el-row class="banner black">
+    <el-row class="banner white">
         <el-col :span="4">
 
         </el-col>
         <el-col :span="16">
             <el-row class="inner">
                 <el-col :span="4" class="left">
-                    <div class="clickable home">My Website</div>
+                    <div class="clickable home hvr-bounce-in">My Website</div>
                 </el-col>
-                <el-col :span="14"></el-col>
+                <el-col :span="16"></el-col>
+                <!-- <el-col :span="2" class="flex">
+                    <div class="clickable btn hvr-bounce-in">Projects</div>
+                </el-col> -->
                 <el-col :span="2" class="flex">
-                    <div class="clickable btn">Projects</div>
+                    <div class="clickable btn hvr-bounce-in">Resume</div>
                 </el-col>
                 <el-col :span="2" class="flex">
-                    <div class="clickable btn">Resume</div>
-                </el-col>
-                <el-col :span="2" class="flex">
-                    <div class="clickable btn">Contact</div>
+                    <div class="clickable btn hvr-bounce-in">Contact</div>
                 </el-col>
             </el-row>
         </el-col>
@@ -63,14 +63,12 @@
         border-bottom:1px solid lightgrey;
     }
     .home{
-        font-size:24px ;
-        font-weight: 600;
-        font-family: headerFont;
+        font-size:22px ;
+        font-family: englishFont;
         letter-spacing: -0.5px;
     }
     .btn{
-        font-size:20px ;
-        font-weight: 600;
-        font-family: headerFont;
+        font-size:22px ;
+        font-family: englishFont;
     }
 </style>
