@@ -13,7 +13,24 @@
                         <div class="title-wrapper"><span class="title">Education</span></div>
                     </el-col>
                 </el-row>
-                <el-row>
+                <el-row class="row">
+                    <el-col :span="10">
+                        <div class="school-wrapper">
+                            <div class="school">University of British Columbia</div>
+                            <div class="period">2017.09-2021.12</div>
+                        </div>
+                    </el-col>
+                    <el-col :span="14">
+                        <div class="detail-wrapper">
+                            <div class="major">Major - Computer Science</div>
+                            <div class="award">
+                                <div>Vice president's scholarship</div>
+                                <div>Vice president's scholarship</div>
+                            </div>
+                        </div>
+                    </el-col>
+                </el-row>
+                <el-row class="row">
                     <el-col :span="10">
                         <div class="school-wrapper">
                             <div class="school">University of British Columbia</div>
@@ -38,6 +55,7 @@
 <style scoped>
     .main {
         padding: 2.5% 10%;
+        background: #F3EFE0;
     }
 
     .title {
@@ -80,12 +98,13 @@
     }
 
     .school-wrapper .period {
+        font-size: 17px;
         color: grey;
         padding: 3% 0;
     }
 
     .detail-wrapper {
-        font-size: 16px;
+        font-size: 17px;
 
         text-align: left;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -96,5 +115,12 @@
 
         font-weight: bold;
 
+    }
+    .detail-wrapper .award{
+         color: grey;
+        padding: 3% 0;
+    }
+    .row{
+        margin-bottom:50px;
     }
 </style>
