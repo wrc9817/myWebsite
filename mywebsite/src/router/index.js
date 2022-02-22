@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Layout from '../views/Base.vue'
 import Home from '../views/home/index.vue'
 import {
   MY_ROUTES,
@@ -7,14 +6,10 @@ import {
 } from './routes/index'
 const routes = [
   {
-    path: '/',
-    name: MY_ROUTE_NAMES.BASE,
-    redirect:MY_ROUTES.HOME,
-    component: Layout,
-    children:[{
-      path:MY_ROUTES.HOME,
-      component:Home,
-    }]
+    name: MY_ROUTE_NAMES.HOME,
+    path:MY_ROUTES.HOME,
+    component: Home,
+
   },
 ]
 
