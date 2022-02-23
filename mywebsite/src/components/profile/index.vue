@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <el-row>
+        <el-row class="animate__animated animate__fadeIn animate__slow">
             <el-col :span="12" :offset="6">
                 <div class="title-wrapper">
                     <span class="title">Profile</span>
@@ -12,7 +12,7 @@
             <el-col :span="12" :offset="6">
                 <el-row class="detail-wrapper">
                     <el-col :span="8">
-                        <div class="about-wrapper">
+                        <div class="about-wrapper animate__animated animate__fadeIn animate__delay-05s">
                             <div class="title">About Me</div>
                             <div class="content">I am an allround web developer. I am a senior programmer with good
                                 knowledge of front-end techniques. I love structure and order and I also stand for
@@ -62,7 +62,11 @@
 
     }
 </script>
-
+<style>
+.animate__delay-05s{
+animation-duration: 5s;
+}
+</style>
 <style scoped>
     .main {
         padding: 2.5% 10%;
@@ -148,4 +152,5 @@
         letter-spacing: 5px;
         padding: 2% 0;
     }
+
 </style>

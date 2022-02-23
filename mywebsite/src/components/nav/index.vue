@@ -1,5 +1,5 @@
 <template>
-    <el-affix :offset="120" :position="'top'">
+    <el-affix :offset="120" :position="'top'" class="animate__animated animate__fadeInRight animate__delay-1s">
         <div class="main">
             <div class="item hvr-grow" v-for="item in hightlight" :key="item" :class="{isActive:item.active}"
                 @click="handleClickToScroll(item.name)">
@@ -20,8 +20,7 @@
             this.init()
         },
         methods: {
-            handleClickToScroll(name) {
-                this.$store.commit('handleChangePage', name)
+            autoChangeNav(name){
                 for (var i in this.hightlight) {
                     if (this.hightlight[i].name == name) {
                         this.hightlight[i].active = true
@@ -29,6 +28,9 @@
                         this.hightlight[i].active = false
                     }
                 }
+            },  
+            handleClickToScroll(name) {
+                this.$store.commit('handleChangePage', name)
             },
             init() {
                 this.hightlight = [{
