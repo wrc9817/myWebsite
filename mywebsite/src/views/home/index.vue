@@ -1,10 +1,11 @@
 <template>
   <div class="main">
-    <Profile></Profile>
-    <Experience></Experience>
-    <Skill></Skill>
-    <Projects></Projects>
-    <Contact></Contact>
+    <Nav class="nav"></Nav>
+    <Profile id="Profile"></Profile>
+    <Experience id="Experience"></Experience>
+    <Abilities id="Abilities"></Abilities>
+    <Projects id="Projects"></Projects>
+    <Contact id="Contact"></Contact>
   </div>
 </template>
 
@@ -14,19 +15,44 @@
   } from 'wowjs'
   import Experience from '../../components/experience/index.vue'
 import Profile from '../../components/profile/index'
-import Skill from '../../components/abilities/index.vue'
+import Abilities from '../../components/abilities/index.vue'
 import Projects from '../../components/projects/index.vue'
 import Contact from '../../components/contact/index.vue'
+import Nav from '../../components/nav/index.vue'
   export default {
     components:{
       Profile,
       Experience,
-      Skill,
+      Abilities,
       Projects,
-      Contact
+      Contact,
+      Nav
     },
     mounted() {
       new WOW({ live: false, scrollContainer: '.el-scrollbar__wrap' }).init();
+    },
+    computed:{
+      page:function(){
+        return this.$store.state.page
+      }
+    },
+    watch:{
+      "$store.state.page":{
+        handler:function(newVal){
+          if(newVal){
+            this.handleClickToScroll(newVal)
+          }
+        }
+      }
+    },
+    methods:{
+      handleClickToScroll(name){
+        var top = document.getElementById(name).offsetTop
+        window.scrollTo({
+          top:top,
+          behavior:'smooth'
+        })
+      }
     },
     data() {
       return {
@@ -38,5 +64,8 @@ import Contact from '../../components/contact/index.vue'
 </script>
 
 <style scoped>
-  
+  .nav{
+    position: absolute;
+    right:200px;
+  }
 </style>
