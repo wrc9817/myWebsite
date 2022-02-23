@@ -39,13 +39,9 @@
                                     <div class="label">Age:</div>
                                     <div class="value">24</div>
                                 </div>
-                                <div class="email">
-                                    <div class="label">Email:</div>
-                                    <div class="value">wrc9817@gmail.com</div>
-                                </div>
-                                <div class="number">
-                                    <div class="label">phone:</div>
-                                    <div class="value">13163338455</div>
+                                <div class="address">
+                                    <div class="label">Address:</div>
+                                    <div class="value">武汉市东西湖区金地格林春岸泽园</div>
                                 </div>
                             </div>
                         </div>
@@ -102,6 +98,7 @@
 
     .about-wrapper .content {
         font-size: 18px;
+        
     }
 
     .pic-wrapper {
@@ -142,7 +139,9 @@
     .personal-info .value {
         font-size: 22px;
     }
-
+    .personal-info .address .value{
+        font-size: 16px;
+    }
     .quote-wrapper {
         font-family: englishFont;
         font-size: 24px;

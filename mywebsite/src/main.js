@@ -5,6 +5,7 @@ import App from './App.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './assets/font/font.css'
+import './assets/icon/iconfont.css'
 import 'animate.css';
 import 'hover.css'
 import VueParticles from 'vue-particles'

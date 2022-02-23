@@ -1,0 +1,23 @@
+{
+  "id": "2759778",
+  "name": "my-webite",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3483765",
+      "name": "邮箱",
+      "font_class": "youxiang",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "7568889",
+      "name": "24gf-telephone2",
+      "font_class": "24gf-telephone2",
+      "unicode": "e96d",
+      "unicode_decimal": 59757
+    }
+  ]
+}

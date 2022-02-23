@@ -2,6 +2,9 @@
   <div class="main">
     <Profile></Profile>
     <Experience></Experience>
+    <Skill></Skill>
+    <Projects></Projects>
+    <Contact></Contact>
   </div>
 </template>
 
@@ -11,10 +14,16 @@
   } from 'wowjs'
   import Experience from '../../components/experience/index.vue'
 import Profile from '../../components/profile/index'
+import Skill from '../../components/abilities/index.vue'
+import Projects from '../../components/projects/index.vue'
+import Contact from '../../components/contact/index.vue'
   export default {
     components:{
       Profile,
-      Experience
+      Experience,
+      Skill,
+      Projects,
+      Contact
     },
     mounted() {
       new WOW({ live: false, scrollContainer: '.el-scrollbar__wrap' }).init();

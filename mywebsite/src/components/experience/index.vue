@@ -16,16 +16,15 @@
                 <el-row class="row">
                     <el-col :span="10">
                         <div class="school-wrapper">
-                            <div class="school">University of British Columbia</div>
-                            <div class="period">2017.09-2021.12</div>
+                            <div class="school">University of Melbourne</div>
+                            <div class="period">2022.03 - 2023.12</div>
                         </div>
                     </el-col>
                     <el-col :span="14">
                         <div class="detail-wrapper">
-                            <div class="major">Major - Computer Science</div>
+                            <div class="major">Master - Cybersecurity</div>
                             <div class="award">
-                                <div>Vice president's scholarship</div>
-                                <div>Vice president's scholarship</div>
+                                <div>TBA</div>
                             </div>
                         </div>
                     </el-col>
@@ -34,13 +33,52 @@
                     <el-col :span="10">
                         <div class="school-wrapper">
                             <div class="school">University of British Columbia</div>
-                            <div class="period">2017.09-2021.12</div>
+                            <div class="period">2017.09 - 2021.12</div>
                         </div>
                     </el-col>
                     <el-col :span="14">
                         <div class="detail-wrapper">
-                            <div class="major">Major - Computer Science</div>
-                            <div class="award">Vice president's scholarship
+                            <div class="major">Undergraduate - Computer Science</div>
+                            <div class="award">
+                                <div>Vice president's scholarship</div>
+                            </div>
+                        </div>
+                    </el-col>
+                </el-row>
+                <el-row class="row">
+                    <el-col :span="10">
+                        <div class="school-wrapper">
+                            <div class="school">Wuhan No.2 high school</div>
+                            <div class="period">2014.09 - 2017.06</div>
+                        </div>
+                    </el-col>
+                    <el-col :span="14">
+                        <div class="detail-wrapper">
+                            <div class="major">International department - St. Mary high school
+                            </div>
+                            <div class="award">
+                                <div>TBA</div>
+                            </div>
+                        </div>
+                    </el-col>
+                </el-row>
+                <el-row>
+                    <el-col :span="24">
+                        <div class="title-wrapper"><span class="title">Career</span></div>
+                    </el-col>
+                </el-row>
+                <el-row class="row">
+                    <el-col :span="10">
+                        <div class="school-wrapper">
+                            <div class="school">武汉众娱信息技术有限公司</div>
+                            <div class="period">2021.09 - 至今</div>
+                        </div>
+                    </el-col>
+                    <el-col :span="14">
+                        <div class="detail-wrapper">
+                            <div class="major">实习 - 前端可视化工程师</div>
+                            <div class="award">
+                                <div>TBA</div>
                             </div>
                         </div>
                     </el-col>
