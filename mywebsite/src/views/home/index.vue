@@ -35,13 +35,8 @@ import Nav from '../../components/nav/index.vue'
     deactivated () {
     window.removeEventListener('scroll', this.handleScroll, false)
   },
-    computed:{
-      page:function(){
-        return this.$store.state.page
-      }
-    },
     watch:{
-      "$store.state.page":{
+      "$store.state.setUp.page":{
         handler:function(newVal){
           if(newVal){
             this.handleClickToScroll(newVal)

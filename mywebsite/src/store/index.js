@@ -5,6 +5,7 @@ import abilities from './modules/abilities'
 import projects from './modules/projects'
 import contact from './modules/contact'
 export const store = createStore({
+  
   modules: {
     experience,
     setUp,

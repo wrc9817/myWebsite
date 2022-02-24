@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import {mapMutations} from'vuex'
     export default {
         data() {
             return {
@@ -20,6 +21,9 @@
             this.init()
         },
         methods: {
+            ...mapMutations({
+                handleClickToScroll:'setUp/handleChangePage'
+            }),
             autoChangeNav(name){
                 for (var i in this.hightlight) {
                     if (this.hightlight[i].name == name) {
@@ -29,9 +33,9 @@
                     }
                 }
             },  
-            handleClickToScroll(name) {
-                this.$store.commit('handleChangePage', name)
-            },
+            // handleClickToScroll(name) {
+            //     this.$store.commit('setUp/handleChangePage', name)
+            // },
             init() {
                 this.hightlight = [{
                         name: 'Profile',
