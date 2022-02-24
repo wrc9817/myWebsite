@@ -2,7 +2,7 @@
   <div class="main">
       <el-row>
             <el-col :span="setUp.span" :offset="setUp.offset">
-                <div class="title-wrapper">
+                <div class="title-wrapper" :class="animateHeader">
                     <span class="title">Abilities</span>
                     <span class="slogan">I'm a Web developer</span>
                 </div>
@@ -12,11 +12,13 @@
             <el-col :span="setUp.span" :offset="setUp.offset">
                 <el-row>
                     <el-col :span="24">
-                        <div class="title-wrapper"><span class="title">Skills</span></div>
+                        <div class="title-wrapper" :class="animate">
+                            <span class="title">Skills</span>
+                        </div>
                     </el-col>
                 </el-row>
                 <el-row class="skills" :gutter="20">
-                    <el-col :span="12" v-for="item in skillList" :key="item.name">
+                    <el-col :span="12" v-for="item in skillList" :key="item.name" :class="animate">
                         <el-row>
                             <el-col :span="12" class="name-wrapper">
                                 <div class="name">{{item.name}}</div>
@@ -37,11 +39,13 @@
                 </el-row>
                 <el-row>
                     <el-col :span="24">
-                        <div class="title-wrapper"><span class="title">Tools</span></div>
+                        <div class="title-wrapper" :class="animate">
+                            <span class="title">Tools</span>
+                        </div>
                     </el-col>
                 </el-row>
                 <el-row class="tools" :gutter="20">
-                    <el-col :span="12" v-for="item in toolList" :key="item.name">
+                    <el-col :span="12" v-for="item in toolList" :key="item.name" :class="animate">
                         <el-row>
                             <el-col :span="12" class="name-wrapper">
                                 <div class="name">{{item.name}}</div>
@@ -69,7 +73,13 @@
 export default {
     computed:{
             setUp:function(){
-                return this.$store.state.setUp
+                return this.$store.state.setUp.layout
+            },
+            animate:function(){
+                return this.$store.state.abilities.animateContent
+            },
+            animateHeader:function(){
+                return this.$store.state.abilities.animateHeader
             }
         },
     data(){

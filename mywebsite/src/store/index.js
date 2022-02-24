@@ -1,23 +1,16 @@
 import { createStore } from 'vuex'
-
+import experience from './modules/experience'
+import setUp from './modules/setUp'
+import abilities from './modules/abilities'
+import projects from './modules/projects'
+import contact from './modules/contact'
 export const store = createStore({
-  state: {
-    page:'Profile',
-    setUp:{
-      span:14,
-      offset:5,
-    }
-  },
-  getters: {
-  },
-  mutations: {
-    handleChangePage(state,payload){
-      state.page = payload;
-    }
-  },
-  actions: {
-  },
   modules: {
+    experience,
+    setUp,
+    abilities,
+    projects,
+    contact
   }
 })
 export function setupStore(app){

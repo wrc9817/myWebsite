@@ -1,6 +1,6 @@
 <template>
     <div class="main">
-        <el-row class="animate__animated animate__fadeIn animate__slow">
+        <el-row class="animate__animated animate__fadeIn">
             <el-col :span="setUp.span" :offset="setUp.offset">
                 <div class="title-wrapper">
                     <span class="title">Profile</span>
@@ -12,7 +12,7 @@
             <el-col :span="setUp.span" :offset="setUp.offset">
                 <el-row class="detail-wrapper">
                     <el-col :span="8">
-                        <div class="about-wrapper animate__animated animate__fadeIn animate__delay-05s">
+                        <div class="about-wrapper animate__animated animate__fadeIn animate__delay-1s animate__slow">
                             <div class="title">About Me</div>
                             <div class="content">I am an allround web developer. I am a senior programmer with good
                                 knowledge of front-end techniques. I love structure and order and I also stand for
@@ -31,15 +31,15 @@
                     <el-col :span="8">
                         <div class="personal-info-wrapper">
                             <div class="personal-info">
-                                <div class="name">
+                                <div class="name animate__animated animate__fadeIn animate__delay-1_5s animate__slow">
                                     <div class="label">Name:</div>
                                     <div class="value">Ruochan Wang</div>
                                 </div>
-                                <div class="age">
+                                <div class="age animate__animated animate__fadeIn animate__delay-2s animate__slow">
                                     <div class="label">Age:</div>
                                     <div class="value">24</div>
                                 </div>
-                                <div class="address">
+                                <div class="address animate__animated animate__fadeIn animate__delay-2_5s animate__slow">
                                     <div class="label">Address:</div>
                                     <div class="value">武汉市东西湖区金地格林春岸泽园</div>
                                 </div>
@@ -51,7 +51,7 @@
         </el-row>
         <el-row>
             <el-col :span="24">
-                <div class="quote-wrapper">"Have A Great Day"</div>
+                <div class="quote-wrapper animate__animated animate__fadeIn animate__delay-3s">"Have A Great Day"</div>
             </el-col>
         </el-row>
     </div>
@@ -61,14 +61,24 @@
     export default {
         computed:{
             setUp:function(){
-                return this.$store.state.setUp
+                return this.$store.state.setUp.layout
             }
         },
     }
 </script>
 <style>
 .animate__delay-05s{
-animation-duration: 5s;
+animation-delay: .5s;
+}
+.animate__delay-1s{
+animation-delay: 1s;
+}
+.animate__delay-1_5s{
+animation-delay: 1.5s;
+}
+.animate__delay-2_5s{
+    animation-delay: 2.5s;
+
 }
 </style>
 <style scoped>

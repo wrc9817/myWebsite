@@ -2,7 +2,7 @@
   <div class="main">
       <el-row>
             <el-col :span="setUp.span" :offset="setUp.offset">
-                <div class="title-wrapper">
+                <div class="title-wrapper" :class="animateHeader">
                     <span class="title">Contact</span>
                     <span class="slogan">I'm a Web developer</span>
                 </div>
@@ -11,7 +11,7 @@
         <el-row>
             <el-col :span="setUp.span" :offset="setUp.offset" class="body">
                 <el-row>
-                    <el-col :span="12">
+                    <el-col :span="12" :class="animate">
                         <el-row class="flex hvr-glow" @click="handleCopy('email')">
                             <el-col :span="4">
                                 <span class="iconfont icon">&#xe672;</span>
@@ -21,7 +21,7 @@
                             </el-col>
                         </el-row>
                     </el-col>
-                    <el-col :span="12">
+                    <el-col :span="12" :class="animate">
                         <el-row class="flex hvr-glow" @click="handleCopy('phone')">
                             <el-col :span="4">
                                 <span class="iconfont icon">&#xe96d;</span>
@@ -44,7 +44,13 @@ import { ElMessage } from 'element-plus'
 export default {
     computed:{
             setUp:function(){
-                return this.$store.state.setUp
+                return this.$store.state.setUp.layout
+            },
+            animate:function(){
+                return this.$store.state.contact.animateContent
+            },
+            animateHeader:function(){
+                return this.$store.state.contact.animateHeader
             }
         },
     methods:{

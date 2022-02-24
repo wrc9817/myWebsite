@@ -2,7 +2,7 @@
   <div class="main">
       <el-row>
             <el-col :span="setUp.span" :offset="setUp.offset">
-                <div class="title-wrapper">
+                <div class="title-wrapper" :class="animateHeader">
                     <span class="title">Projects</span>
                     <span class="slogan">I'm a Web developer</span>
                 </div>
@@ -15,7 +15,13 @@
 export default {
 computed:{
             setUp:function(){
-                return this.$store.state.setUp
+                return this.$store.state.setUp.layout
+            },
+            animate:function(){
+                return this.$store.state.projects.animateContent
+            },
+            animateHeader:function(){
+                return this.$store.state.projects.animateHeader
             }
         },
 }
