@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import {CHANGE_PAGE} from '../../constants/mutations/index'
 import {mapMutations} from'vuex'
     export default {
         data() {
@@ -21,8 +22,8 @@ import {mapMutations} from'vuex'
             this.init()
         },
         methods: {
-            ...mapMutations({
-                handleClickToScroll:'setUp/handleChangePage'
+            ...mapMutations('setUp',{
+                handleClickToScroll:CHANGE_PAGE
             }),
             autoChangeNav(name){
                 for (var i in this.hightlight) {

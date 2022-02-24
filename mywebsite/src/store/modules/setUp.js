@@ -1,4 +1,7 @@
 
+import {
+  CHANGE_PAGE
+} from '../../constants/mutations/index'
 const state = {
   page:'Profile',
     layout:{
@@ -10,7 +13,7 @@ const getters = {
 
 }
 const mutations = {
-  handleChangePage(state,payload){
+  [CHANGE_PAGE](state,payload){
     state.page = payload;
   }
 }
