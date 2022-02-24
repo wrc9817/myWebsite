@@ -1,7 +1,7 @@
 <template>
   <div class="main">
       <el-row>
-            <el-col :span="12" :offset="6">
+            <el-col :span="setUp.span" :offset="setUp.offset">
                 <div class="title-wrapper">
                     <span class="title">Contact</span>
                     <span class="slogan">I'm a Web developer</span>
@@ -9,7 +9,7 @@
             </el-col>
         </el-row>
         <el-row>
-            <el-col :span="12" :offset="6" class="body">
+            <el-col :span="setUp.span" :offset="setUp.offset" class="body">
                 <el-row>
                     <el-col :span="12">
                         <el-row class="flex hvr-glow" @click="handleCopy('email')">
@@ -42,6 +42,11 @@
 import { ElMessage } from 'element-plus'
 
 export default {
+    computed:{
+            setUp:function(){
+                return this.$store.state.setUp
+            }
+        },
     methods:{
         handleCopy(name){
             var context = document.getElementsByClassName(name)[0].innerHTML

@@ -1,7 +1,7 @@
 <template>
     <div class="main">
         <el-row class="animate__animated animate__fadeIn animate__slow">
-            <el-col :span="12" :offset="6">
+            <el-col :span="setUp.span" :offset="setUp.offset">
                 <div class="title-wrapper">
                     <span class="title">Profile</span>
                     <span class="position">I'm a Web developer</span>
@@ -9,7 +9,7 @@
             </el-col>
         </el-row>
         <el-row>
-            <el-col :span="12" :offset="6">
+            <el-col :span="setUp.span" :offset="setUp.offset">
                 <el-row class="detail-wrapper">
                     <el-col :span="8">
                         <div class="about-wrapper animate__animated animate__fadeIn animate__delay-05s">
@@ -59,7 +59,11 @@
 
 <script>
     export default {
-
+        computed:{
+            setUp:function(){
+                return this.$store.state.setUp
+            }
+        },
     }
 </script>
 <style>

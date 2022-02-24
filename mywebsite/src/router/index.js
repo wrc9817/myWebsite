@@ -6,6 +6,10 @@ import {
 } from './routes/index'
 const routes = [
   {
+    path:'/',
+    redirect:MY_ROUTES.HOME
+  },
+  {
     name: MY_ROUTE_NAMES.HOME,
     path:MY_ROUTES.HOME,
     component: Home,

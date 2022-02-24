@@ -1,13 +1,13 @@
 <template>
     <div class="main">
         <el-row>
-            <el-col :span="12" :offset="6">
+            <el-col :span="setUp.span" :offset="setUp.offset">
                 <div class="title-wrapper"><span class="title">Experience</span><span class="slogan">where I learn
                         things from</span></div>
             </el-col>
         </el-row>
         <el-row class="body">
-            <el-col :span="12" :offset="6">
+            <el-col :span="setUp.span" :offset="setUp.offset">
                 <el-row>
                     <el-col :span="24">
                         <div class="title-wrapper"><span class="title">Education</span></div>
@@ -88,7 +88,13 @@
     </div>
 </template>
 <script>
-    export default {}
+    export default {
+        computed:{
+            setUp:function(){
+                return this.$store.state.setUp
+            }
+        },
+    }
 </script>
 <style scoped>
     .main {

@@ -1,7 +1,7 @@
 <template>
   <div class="main">
       <el-row>
-            <el-col :span="12" :offset="6">
+            <el-col :span="setUp.span" :offset="setUp.offset">
                 <div class="title-wrapper">
                     <span class="title">Abilities</span>
                     <span class="slogan">I'm a Web developer</span>
@@ -9,7 +9,7 @@
             </el-col>
         </el-row>
         <el-row  class="body">
-            <el-col :span="12" :offset="6">
+            <el-col :span="setUp.span" :offset="setUp.offset">
                 <el-row>
                     <el-col :span="24">
                         <div class="title-wrapper"><span class="title">Skills</span></div>
@@ -67,6 +67,11 @@
 
 <script>
 export default {
+    computed:{
+            setUp:function(){
+                return this.$store.state.setUp
+            }
+        },
     data(){
         return{
             skillList:[
