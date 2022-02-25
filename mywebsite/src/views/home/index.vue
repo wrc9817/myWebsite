@@ -102,7 +102,9 @@ import Nav from '../../components/nav/index.vue'
 <style scoped>
   .nav{
     position: fixed;
-    right:200px;
+    right:200px !important;
     z-index:10;
+    width:120px !important;
+    height:fit-content !important;
   }
 </style>

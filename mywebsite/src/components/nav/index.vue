@@ -34,9 +34,6 @@ import {mapMutations} from'vuex'
                     }
                 }
             },  
-            // handleClickToScroll(name) {
-            //     this.$store.commit('setUp/handleChangePage', name)
-            // },
             init() {
                 this.hightlight = [{
                         name: 'Profile',

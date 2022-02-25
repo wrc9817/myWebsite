@@ -1,12 +1,39 @@
 <template>
-  <router-view/>
+<router-view v-slot="{ Component }">
+  <transition name="scale" mode="out-in">
+    <component :is="Component" />
+  </transition>
+</router-view>
 </template>
 <script>
 export default {
-
 }
 </script>
 <style>
+
+.scale-enter-active{
+  -webkit-transform: none;
+  transform: none;
+  will-change:auto;
+  transition: all 0.5s ease-out;
+
+}
+.scale-leave-active {
+  -webkit-transform: none;
+  transform: none;
+  will-change:auto;
+  transition: all 0.5s ease-in;
+}
+
+
+.scale-enter-from{
+  opacity: 0.5;
+  transform: scale(1.4);
+}
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(1.2);
+}
 body{
   margin:0 !important;
 }
