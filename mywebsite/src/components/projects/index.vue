@@ -1,8 +1,8 @@
 <template>
   <div class="main">
       <el-row>
-            <el-col :span="setUp.span" :offset="setUp.offset">
-                <div class="title-wrapper" :class="animateHeader">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET">
+                <div class="title-wrapper" :class="PROJ_HEADER">
                     <span class="title">Projects</span>
                     <span class="slogan">I'm a Web developer</span>
                 </div>
@@ -12,18 +12,15 @@
 </template>
 
 <script>
+import {PROJ_CONTENT,PROJ_HEADER} from '../../constants/style/index'
+import {LAYOUT} from '../../constants/layout/index'
+
 export default {
-computed:{
-            setUp:function(){
-                return this.$store.state.setUp.layout
-            },
-            animate:function(){
-                return this.$store.state.projects.animateContent
-            },
-            animateHeader:function(){
-                return this.$store.state.projects.animateHeader
-            }
-        },
+    data(){
+        return{
+            LAYOUT,PROJ_CONTENT,PROJ_HEADER
+        }
+    }
 }
 </script>
 <style scoped>

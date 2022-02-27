@@ -1,7 +1,6 @@
 
 const state = {
-  animateContent:'wow animate__animated animate__pulse animate__slow animate__delay-05s',
-  animateHeader:'wow animate__animated animate__fadeIn animate__slow',
+  
 }
 const getters = {
 

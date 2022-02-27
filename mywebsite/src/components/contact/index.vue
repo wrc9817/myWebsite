@@ -1,17 +1,17 @@
 <template>
   <div class="main">
       <el-row>
-            <el-col :span="setUp.span" :offset="setUp.offset">
-                <div class="title-wrapper" :class="animateHeader">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET">
+                <div class="title-wrapper" :class="CONTACT_HEADER">
                     <span class="title">Contact</span>
                     <span class="slogan">I'm a Web developer</span>
                 </div>
             </el-col>
         </el-row>
         <el-row>
-            <el-col :span="setUp.span" :offset="setUp.offset" class="body">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET" class="body">
                 <el-row>
-                    <el-col :span="12" :class="animate">
+                    <el-col :span="12" :class="CONTACT_CONTENT">
                         <el-row class="flex hvr-glow" @click="handleCopy('email')">
                             <el-col :span="4">
                                 <span class="iconfont icon">&#xe672;</span>
@@ -21,7 +21,7 @@
                             </el-col>
                         </el-row>
                     </el-col>
-                    <el-col :span="12" :class="animate">
+                    <el-col :span="12" :class="CONTACT_CONTENT">
                         <el-row class="flex hvr-glow" @click="handleCopy('phone')">
                             <el-col :span="4">
                                 <span class="iconfont icon">&#xe96d;</span>
@@ -40,19 +40,14 @@
 
 <script>
 import { ElMessage } from 'element-plus'
-
+import {CONTACT_CONTENT,CONTACT_HEADER} from '../../constants/style/index'
+import {LAYOUT} from '../../constants/layout/index'
 export default {
-    computed:{
-            setUp:function(){
-                return this.$store.state.setUp.layout
-            },
-            animate:function(){
-                return this.$store.state.contact.animateContent
-            },
-            animateHeader:function(){
-                return this.$store.state.contact.animateHeader
-            }
-        },
+    data(){
+        return{
+            LAYOUT,CONTACT_CONTENT,CONTACT_HEADER
+        }
+    },
     methods:{
         handleCopy(name){
             var context = document.getElementsByClassName(name)[0].innerHTML

@@ -1,7 +1,7 @@
 <template>
     <div class="main">
-        <el-row class="animate__animated animate__fadeIn">
-            <el-col :span="setUp.span" :offset="setUp.offset">
+        <el-row :class="PROFILE_HEADER">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET">
                 <div class="title-wrapper">
                     <span class="title">Profile</span>
                     <span class="position">I'm a Web developer</span>
@@ -9,10 +9,10 @@
             </el-col>
         </el-row>
         <el-row>
-            <el-col :span="setUp.span" :offset="setUp.offset">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET">
                 <el-row class="detail-wrapper">
                     <el-col :span="8">
-                        <div class="about-wrapper animate__animated animate__fadeIn animate__delay-1s animate__slow">
+                        <div class="about-wrapper animate__delay-1s" :class="PROFILE_CONTENT">
                             <div class="title">About Me</div>
                             <div class="content">I am an allround web developer. I am a senior programmer with good
                                 knowledge of front-end techniques. I love structure and order and I also stand for
@@ -31,15 +31,15 @@
                     <el-col :span="8">
                         <div class="personal-info-wrapper">
                             <div class="personal-info">
-                                <div class="name animate__animated animate__fadeIn animate__delay-1_5s animate__slow">
+                                <div class="name animate__delay-1_5s" :class="PROFILE_CONTENT">
                                     <div class="label">Name:</div>
                                     <div class="value">Ruochan Wang</div>
                                 </div>
-                                <div class="age animate__animated animate__fadeIn animate__delay-2s animate__slow">
+                                <div class="age animate__delay-2s" :class="PROFILE_CONTENT">
                                     <div class="label">Age:</div>
                                     <div class="value">24</div>
                                 </div>
-                                <div class="address animate__animated animate__fadeIn animate__delay-2_5s animate__slow">
+                                <div class="address animate__delay-2_5s" :class="PROFILE_CONTENT">
                                     <div class="label">Address:</div>
                                     <div class="value">武汉市东西湖区金地格林春岸泽园</div>
                                 </div>
@@ -51,17 +51,20 @@
         </el-row>
         <el-row>
             <el-col :span="24">
-                <div class="quote-wrapper animate__animated animate__fadeIn animate__delay-3s">"Have A Great Day"</div>
+                <div class="quote-wrapper animate__delay-3s" :class="PROFILE_CONTENT">"Have A Great Day"</div>
             </el-col>
         </el-row>
     </div>
 </template>
 
 <script>
+import {PROFILE_CONTENT,PROFILE_HEADER} from '../../constants/style/index'
+import {LAYOUT} from '../../constants/layout/index'
+
     export default {
-        computed:{
-            setUp:function(){
-                return this.$store.state.setUp.layout
+        data(){
+            return{
+                LAYOUT,PROFILE_CONTENT,PROFILE_HEADER
             }
         },
     }

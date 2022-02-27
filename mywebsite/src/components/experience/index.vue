@@ -1,31 +1,31 @@
 <template>
     <div class="main">
         <el-row>
-            <el-col :span="setUp.span" :offset="setUp.offset">
-                <div class="title-wrapper" :class="animateHeader">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET">
+                <div class="title-wrapper" :class="EXP_HEADER">
                     <span class="title">Experience</span>
                     <span class="slogan">where I learnthings from</span>
                 </div>
             </el-col>
         </el-row>
         <el-row class="body">
-            <el-col :span="setUp.span" :offset="setUp.offset">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET">
                 <el-row>
                     <el-col :span="24">
-                        <div class="title-wrapper" :class="animate">
+                        <div class="title-wrapper" :class="EXP_CONTENT">
                             <span class="title">Education</span>
                         </div>
                     </el-col>
                 </el-row>
                 <el-row class="row">
                     <el-col :span="10">
-                        <div class="school-wrapper" :class="animate">
+                        <div class="school-wrapper" :class="EXP_CONTENT">
                             <div class="school">University of Melbourne</div>
                             <div class="period">2022.03 - 2023.12</div>
                         </div>
                     </el-col>
                     <el-col :span="14">
-                        <div class="detail-wrapper" :class="animate">
+                        <div class="detail-wrapper" :class="EXP_CONTENT">
                             <div class="major">Master - Cybersecurity</div>
                             <div class="award">
                                 <div>TBA</div>
@@ -35,13 +35,13 @@
                 </el-row>
                 <el-row class="row">
                     <el-col :span="10">
-                        <div class="school-wrapper" :class="animate">
+                        <div class="school-wrapper" :class="EXP_CONTENT">
                             <div class="school">University of British Columbia</div>
                             <div class="period">2017.09 - 2021.12</div>
                         </div>
                     </el-col>
                     <el-col :span="14">
-                        <div class="detail-wrapper" :class="animate">
+                        <div class="detail-wrapper" :class="EXP_CONTENT">
                             <div class="major">Undergraduate - Computer Science</div>
                             <div class="award">
                                 <div>Vice president's scholarship</div>
@@ -51,13 +51,13 @@
                 </el-row>
                 <el-row class="row">
                     <el-col :span="10">
-                        <div class="school-wrapper" :class="animate">
+                        <div class="school-wrapper" :class="EXP_CONTENT">
                             <div class="school">Wuhan No.2 high school</div>
                             <div class="period">2014.09 - 2017.06</div>
                         </div>
                     </el-col>
                     <el-col :span="14">
-                        <div class="detail-wrapper" :class="animate">
+                        <div class="detail-wrapper" :class="EXP_CONTENT">
                             <div class="major">International department - St. Mary high school
                             </div>
                             <div class="award">
@@ -68,20 +68,20 @@
                 </el-row>
                 <el-row>
                     <el-col :span="24">
-                        <div class="title-wrapper" :class="animate">
+                        <div class="title-wrapper" :class="EXP_CONTENT">
                             <span class="title">Career</span>
                         </div>
                     </el-col>
                 </el-row>
                 <el-row class="row">
                     <el-col :span="10">
-                        <div class="school-wrapper" :class="animate">
+                        <div class="school-wrapper" :class="EXP_CONTENT">
                             <div class="school">武汉众娱信息技术有限公司</div>
                             <div class="period">2021.09 - 至今</div>
                         </div>
                     </el-col>
                     <el-col :span="14">
-                        <div class="detail-wrapper" :class="animate">
+                        <div class="detail-wrapper" :class="EXP_CONTENT">
                             <div class="major">实习 - 前端可视化工程师</div>
                             <div class="award">
                                 <div>TBA</div>
@@ -94,16 +94,13 @@
     </div>
 </template>
 <script>
+import { EXP_CONTENT,EXP_HEADER} from '../../constants/style/index'
+import {LAYOUT} from '../../constants/layout/index'
+
     export default {
-        computed:{
-            setUp:function(){
-                return this.$store.state.setUp.layout
-            },
-            animate:function(){
-                return this.$store.state.experience.animateContent
-            },
-            animateHeader:function(){
-                return this.$store.state.experience.animateHeader
+        data(){
+            return{
+               LAYOUT, EXP_CONTENT,EXP_HEADER
             }
         },
     }

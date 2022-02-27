@@ -1,24 +1,24 @@
 <template>
   <div class="main">
       <el-row>
-            <el-col :span="setUp.span" :offset="setUp.offset">
-                <div class="title-wrapper" :class="animateHeader">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET">
+                <div class="title-wrapper" :class="AB_HEADER">
                     <span class="title">Abilities</span>
                     <span class="slogan">I'm a Web developer</span>
                 </div>
             </el-col>
         </el-row>
         <el-row  class="body">
-            <el-col :span="setUp.span" :offset="setUp.offset">
+            <el-col :span="LAYOUT.SPAN" :offset="LAYOUT.OFFSET">
                 <el-row>
                     <el-col :span="24">
-                        <div class="title-wrapper" :class="animate">
+                        <div class="title-wrapper" :class="AB_CONTENT">
                             <span class="title">Skills</span>
                         </div>
                     </el-col>
                 </el-row>
                 <el-row class="skills" :gutter="20">
-                    <el-col :span="12" v-for="item in skillList" :key="item.name" :class="animate">
+                    <el-col :span="12" v-for="item in skillList" :key="item.name" :class="AB_CONTENT">
                         <el-row>
                             <el-col :span="12" class="name-wrapper">
                                 <div class="name">{{item.name}}</div>
@@ -39,13 +39,13 @@
                 </el-row>
                 <el-row>
                     <el-col :span="24">
-                        <div class="title-wrapper" :class="animate">
+                        <div class="title-wrapper" :class="AB_CONTENT">
                             <span class="title">Tools</span>
                         </div>
                     </el-col>
                 </el-row>
                 <el-row class="tools" :gutter="20">
-                    <el-col :span="12" v-for="item in toolList" :key="item.name" :class="animate">
+                    <el-col :span="12" v-for="item in toolList" :key="item.name" :class="AB_CONTENT">
                         <el-row>
                             <el-col :span="12" class="name-wrapper">
                                 <div class="name">{{item.name}}</div>
@@ -70,20 +70,14 @@
 </template>
 
 <script>
+import {AB_CONTENT,AB_HEADER} from '../../constants/style/index'
+import {LAYOUT} from '../../constants/layout/index'
 export default {
-    computed:{
-            setUp:function(){
-                return this.$store.state.setUp.layout
-            },
-            animate:function(){
-                return this.$store.state.abilities.animateContent
-            },
-            animateHeader:function(){
-                return this.$store.state.abilities.animateHeader
-            }
-        },
     data(){
         return{
+            LAYOUT,
+            AB_HEADER,
+            AB_CONTENT,
             skillList:[
             {
                 name:'Javascript',

@@ -4,10 +4,6 @@ import {
 } from '../../constants/mutations/index'
 const state = {
   page:'Profile',
-    layout:{
-      span:14,
-      offset:5,
-    },
 }
 const getters = {
 
